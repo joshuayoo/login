@@ -3,15 +3,13 @@
 //module
 const express = require("express");
 const app = express();
-const home = require("./src/routes/home");
+const home = require("./app/src/routes/home");
 
 //veiw
-app.set("views", "./src/views");
+app.set("views", "./app/src/views");
 app.set("view engine", "ejs");
-
+app.use(express.static('${__dirname}/app/src/public'));
 //router
 app.use("/", home);
-
-//www/app
 
 module.exports = app;
