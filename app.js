@@ -3,15 +3,14 @@
 //module
 const express = require("express");
 const app = express();
+const home = require("./src/routes/home");
 
 //veiw
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 //router
-const home = require("./src/routes/home");
 app.use("/", home);
-app.use("/login", home);
 
 //www/app
 
