@@ -9,7 +9,7 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 //router
-const home = require("./routes/home");
+const home = require("./src/routes/home");
 app.use("/", home);
 app.use("/login", home);
 
